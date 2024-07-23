@@ -1,3 +1,4 @@
+import blocks/block_library
 import floats/floats_library
 import gleam/io
 import ints/ints_library
@@ -13,12 +14,6 @@ pub fn main() {
   number_formats_library.number_formats_wrapper()
   io.println(".......................................")
   variables_library.variables_wrapper()
+  io.println(".......................................")
+  block_library.block_wrapper()
 }
-//private function
-// fn type_checking_error() {
-//   io.print("errore type checking: ")
-//   //Error - expected int
-//   // io.println(4)
-//   //Expected
-//   io.println("7")
-// }
