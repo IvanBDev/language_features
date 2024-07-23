@@ -11,9 +11,14 @@ pub fn number_formats_wrapper() {
 
   // Binary, octal, and hex Int literals
   io.println("Binary: ")
-  io.println("0b0010111101" <> " -> " <> int.to_string(0b0010111101))
+  io.println("0b0010111101 -> " <> int.to_string(0b0010111101))
   io.println("Octal: ")
-  io.println("0o17" <> " -> " <> int.to_string(0o17))
+  io.println("0o17 -> " <> int.to_string(0o17))
   io.println("Hex: ")
-  io.println("0x46ACF" <> " -> " <> int.to_string(0x46ACF))
+  io.println("0x46ACF -> " <> int.to_string(0x46ACF))
+
+  //Scientific annotations
+  io.println("Scientific annotations:")
+  io.println("7.0e7 -> " <> float.to_string(7.0e7))
+  io.println("3.0e-4 -> " <> float.to_string(3.0e-4))
 }
