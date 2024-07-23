@@ -1,7 +1,7 @@
 import gleam/float
 import gleam/io.{debug}
 
-pub fn floays_examples_wrapper() {
+pub fn floats_examples_wrapper() {
   // Gleam's numerical operators are not overloaded, so there are dedicated operators for working with floats.
 
   // Float aritmetics

@@ -8,7 +8,7 @@ pub fn main() {
   io.println("Example project starts here")
   ints_library.int_examples_wrapper()
   io.println(".......................................")
-  floats_library.floays_examples_wrapper()
+  floats_library.floats_examples_wrapper()
   io.println(".......................................")
   number_formats_library.number_formats_wrapper()
   io.println(".......................................")
