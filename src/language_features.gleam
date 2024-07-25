@@ -3,6 +3,7 @@ import floats/floats_library
 import functions/functions_libarary
 import gleam/io
 import ints/ints_library
+import loops/loops_wrapper
 import number_formats/number_formats_library
 import variables/variables_library
 
@@ -19,4 +20,6 @@ pub fn main() {
   block_library.block_wrapper()
   io.println(".......................................")
   functions_libarary.functions_wrapper()
+  io.println(".......................................")
+  loops_wrapper.loops_wrapper()
 }
