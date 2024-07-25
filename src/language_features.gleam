@@ -1,5 +1,6 @@
 import blocks/block_library
 import floats/floats_library
+import functions/functions_libarary
 import gleam/io
 import ints/ints_library
 import number_formats/number_formats_library
@@ -16,4 +17,6 @@ pub fn main() {
   variables_library.variables_wrapper()
   io.println(".......................................")
   block_library.block_wrapper()
+  io.println(".......................................")
+  functions_libarary.functions_wrapper()
 }
