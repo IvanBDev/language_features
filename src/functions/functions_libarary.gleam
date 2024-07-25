@@ -1,9 +1,11 @@
 import gleam/int
 import gleam/io
+import gleam/list
 
 pub fn functions_wrapper() {
   case_expressione_function()
   string_pattern_function()
+  list_pattern_function()
 }
 
 fn case_expressione_function() -> String {
@@ -39,4 +41,25 @@ fn get_name(input: String) -> String {
   }
 
   io.debug(result)
+}
+
+fn list_pattern_function() {
+  io.println("List Patterns:")
+  let list: List(Int) =
+    list.repeat(int.random(11), times: int.random(4)) |> io.debug
+
+  case list {
+    // [] = empty list
+    [] -> "The list is empty"
+    // [n] a list with only n
+    [4] -> "List of just 4"
+    // [n, ..] a list that starts with n and with any other elements
+    [7, ..] -> "A list that starts with a 7 and matches the rest"
+    // [_, _] a list with only 2 elements
+    [_, _] -> "A list with only 2 elements"
+    // [_, _, ..] a list that have at least 2 elements and with any other elements
+    [_, _, ..] -> "A list that has at least 2 elements"
+    _ -> "Any other list"
+  }
+  |> io.println
 }
