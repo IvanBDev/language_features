@@ -3,9 +3,10 @@ import gleam/io
 
 pub fn functions_wrapper() {
   case_expressione_function()
+  string_pattern_function()
 }
 
-fn case_expressione_function() {
+fn case_expressione_function() -> String {
   io.println("Case Expression:")
   let random_number: Int = int.random(11)
 
@@ -18,5 +19,24 @@ fn case_expressione_function() {
     random_number -> int.to_string(random_number)
   }
 
-  result
+  io.debug(result)
+}
+
+fn string_pattern_function() {
+  io.println("String Pattern:")
+
+  get_name("Hello, Ivan")
+  get_name("Hello, Mario")
+  get_name("Hello, Franci")
+  get_name("System still working?")
+}
+
+fn get_name(input: String) -> String {
+  io.println("Input string: " <> input)
+  let result: String = case input {
+    "Hello, " <> name -> name
+    _ -> "Unknown"
+  }
+
+  io.debug(result)
 }
