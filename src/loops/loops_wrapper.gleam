@@ -12,10 +12,9 @@ pub fn loops_wrapper() {
   io.println("Finding the greater number from a list")
   io.print("List: ")
   io.debug([18, 56, 58_980_345, 400, 85, 9000, 37, 91, 40_000])
-  io.debug(greater_number(
-    [18, 56, 58_980_345, 400, 85, 9000, 37, 91, 40_000],
-    0,
-  ))
+  io.debug(
+    find_the_biggest_number([18, 56, 58_980_345, 400, 85, 9000, 37, 91, 40_000]),
+  )
 }
 
 fn recursion_function(root number: Int) -> Int {
@@ -60,6 +59,10 @@ fn sum_function(lista list: List(Int), totale total: Int) -> Int {
     }
     [] -> total
   }
+}
+
+fn find_the_biggest_number(lista list: List(Int)) -> Int {
+  greater_number(list, 0)
 }
 
 fn greater_number(lista list: List(Int), accumulatore acc: Int) -> Int {
