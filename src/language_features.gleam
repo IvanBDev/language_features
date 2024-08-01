@@ -1,4 +1,5 @@
 import blocks/block_library
+import data_types/data_type_wrapper
 import floats/floats_library
 import functions/functions_libarary
 import gleam/io
@@ -22,4 +23,6 @@ pub fn main() {
   functions_libarary.functions_wrapper()
   io.println(".......................................")
   loops_wrapper.loops_wrapper()
+  io.println(".......................................")
+  data_type_wrapper.data_types_wrapper()
 }
