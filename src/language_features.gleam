@@ -4,6 +4,7 @@ import floats/floats_library
 import functions/functions_libarary
 import gleam/io
 import ints/ints_library
+import libraries/library_wrapper
 import loops/loops_wrapper
 import number_formats/number_formats_library
 import variables/variables_library
@@ -24,5 +25,7 @@ pub fn main() {
   io.println(".......................................")
   loops_wrapper.loops_wrapper()
   io.println(".......................................")
-  data_type_wrapper.data_types_wrapper()
+  let _ = data_type_wrapper.data_types_wrapper()
+  io.println(".......................................")
+  library_wrapper.librarys_wrapper()
 }

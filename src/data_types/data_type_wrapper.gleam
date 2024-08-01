@@ -50,7 +50,7 @@ pub fn data_types_wrapper() {
   io.println("------------------------------------------")
   option_type_examples()
   io.println("------------------------------------------")
-  io.debug(reslt_type_example())
+  result_type_example()
 }
 
 fn tuples_and_triples_example() {
@@ -162,19 +162,22 @@ fn trying_loops_with_optional(lista list: List(TOptionalUser)) -> Nil {
   }
 }
 
-fn reslt_type_example() -> Result(Int, PurchaseError) {
+fn result_type_example() -> Result(Int, PurchaseError) {
   let money: Int = int.random(8)
 
-  case money >= 5 {
-    True ->
-      case 0 == int.random(4) {
-        True -> Error(NotLuckyEnough(reason: "So sad 😔😭🥺, don't cry"))
-        False -> Ok(money - 5)
-      }
-    False ->
-      Error(NotEnoughMoney(
-        reason: "Get out of here!! you socio-economic peasant!!!",
-        required: 5,
-      ))
-  }
+  let _ =
+    case money >= 5 {
+      True ->
+        case 0 == int.random(4) {
+          True ->
+            Error(NotLuckyEnough(reason: "So sad 😔😭🥺, don't cry"))
+          False -> Ok(money - 5)
+        }
+      False ->
+        Error(NotEnoughMoney(
+          reason: "Get out of here!! you socio-economic peasant!!!",
+          required: 5,
+        ))
+    }
+    |> io.debug
 }
