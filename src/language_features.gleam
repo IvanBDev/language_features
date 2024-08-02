@@ -7,6 +7,7 @@ import ints/ints_library
 import libraries/library_wrapper
 import loops/loops_wrapper
 import number_formats/number_formats_library
+import opaque_types/opaque_type_library
 import variables/variables_library
 
 pub fn main() {
@@ -27,5 +28,8 @@ pub fn main() {
   io.println(".......................................")
   let _ = data_type_wrapper.data_types_wrapper()
   io.println(".......................................")
-  library_wrapper.librarys_wrapper()
+  let _ = library_wrapper.librarys_wrapper()
+  io.println(".......................................")
+  opaque_type_library.opaque_type_wrapper()
+  io.println(".......................................")
 }
