@@ -8,6 +8,7 @@ import libraries/library_wrapper
 import loops/loops_wrapper
 import number_formats/number_formats_library
 import opaque_types/opaque_type_library
+import use_syntax/use_of_use
 import variables/variables_library
 
 pub fn main() {
@@ -32,4 +33,5 @@ pub fn main() {
   io.println(".......................................")
   opaque_type_library.opaque_type_wrapper()
   io.println(".......................................")
+  use_of_use.use_syntax_wrapper()
 }

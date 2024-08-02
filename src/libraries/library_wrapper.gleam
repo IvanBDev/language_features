@@ -7,9 +7,9 @@ import gleam/result
 
 pub fn librarys_wrapper() {
   io.println("Gleam libraries examples:")
-  list_module_examples()
+  let _ = list_module_examples()
   io.println("-----------------------------")
-  result_module_examples()
+  let _ = result_module_examples()
   io.println("-----------------------------")
   dict_module_example()
 }
