@@ -1,3 +1,4 @@
+import gleam/list
 import gleam/io
 import gleam/result
 
@@ -11,6 +12,7 @@ pub fn use_syntax_wrapper() {
   let _ = without_use() |> io.debug
   let _ = with_use() |> io.debug
   let _ = with_use_in_a_block()
+  let _ = exclamation_with_use(["Hello, World", "Awsome Gleam", "Nice"])
 }
 
 fn without_use() {
@@ -65,4 +67,15 @@ fn get_password() -> Result(String, CustomError) {
 
 fn log_in(_username: String, _password: String) {
   Ok("Welcome")
+}
+
+// This is the same function but without the use syntax, it is just another example
+// fn catify_without_use(strings: List(String)) -> List(String) {
+//   list.map(strings, fn(string) {
+//     string <> " cat"
+//   })
+// }
+fn exclamation_with_use(strings: List(String)) -> List(String) {
+  use string <- list.map(strings)
+  string <> " !"
 }
